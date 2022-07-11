@@ -1,0 +1,31 @@
+﻿<Window x:Class="GsbRapports.majFamilleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GsbRapports"
+        mc:Ignorable="d"
+        Title="Mise à jour des familles" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10,50,-10.4,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Les Familles" Margin="50,0,0,0"/>
+                <ComboBox x:Name="cmbFamille" Margin="30,0,0,0" Width="101" />
+
+            </StackPanel>
+            <TextBox x:Name="txtLibFamille" Margin="146,50,296.6,0" Width="351" HorizontalAlignment="Center" Height="22" DataContext="{Binding SelectedItem, ElementName=cmbFamille}"  Text="{Binding libelle}"/>
+            <Button x:Name="btnValider" Content="Valider" Margin="402,100,291.4,0" RenderTransformOrigin="3.025,0.452" Click="btnValider_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.044"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
+
+        </StackPanel>
+    </Grid>
+</Window>

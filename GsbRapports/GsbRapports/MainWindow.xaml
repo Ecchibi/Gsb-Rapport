@@ -1,0 +1,59 @@
+﻿<Window x:Class="GsbRapports.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GsbRapports"
+        mc:Ignorable="d"
+        Title="GSB gestion des rapports de visites" Height="450" Width="800" Icon="gsb.jpg" HorizontalAlignment="Center"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+
+            <Menu DockPanel.Dock="Top" x:Name="DckMenu" >
+                <MenuItem Header="_Fichier">
+                    <MenuItem Header="_Quitter"/>
+                </MenuItem>
+                <MenuItem Header="_Médecins"/>
+                <MenuItem Header="_Visites"/>
+                <MenuItem Header="_médicaments"/>
+                <MenuItem Header="_visiteurs"/>
+                <MenuItem Header="_Familles">
+                    <MenuItem Header="_Voir" Click="MenuItem_Click"/>
+                    <MenuItem Header="_Modifier" Click="MenuItem_Click_1" />
+                    <MenuItem Header="_Ajouter" Click="MenuItem_Click_2" />
+                </MenuItem>
+                <MenuItem Header="_Rapports" >
+                    <MenuItem Header="_Ajouter" Click="MenuItem_Click_3"/>
+                    <MenuItem Header="_Modifier" Click="MenuItem_Click_4"/>
+                    <MenuItem Header="_Filtrer" Click="MenuItem_Click_5" Margin="2,0,-2.4,0" />
+                </MenuItem>
+            </Menu>
+
+
+        </DockPanel>
+        <Image  Source="logo2.png"  x:Name="imgLogo" Margin="267,28,284.6,235" />
+        <TextBlock x:Name="txtConnexion" FontWeight="Bold" Margin="225,19,266.6,325" Foreground="#FF629FCF" FontSize="48" FontFamily="Segoe UI Light"><Run Text="    "/><Run Text="Connexion"/></TextBlock>
+        <TextBox  x:Name="txtBonjour" Width="148" Height="25" Margin="317,185,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="#FFADE693" Foreground="#FF267790" FontFamily="Yu Gothic UI Semibold" HorizontalContentAlignment="Center"/>
+        <StackPanel  Orientation ="Horizontal" Margin="0,100,0,0" >
+            <StackPanel Margin="250,52,110,132" x:Name="stPanel" Width="302">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="20,0,0,0" FontSize="15" Width="62" Foreground="#FF629FCF" FontFamily="Segoe UI Light"><Run Text="Login"/><Run Foreground="#FFFF1818" Text="*"/><Run Text=" :"/></TextBlock>
+                    <TextBox x:Name ="txtLogin" Width="90" Margin="60,0,0,0" Height="20" Grid.IsSharedSizeScope="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="49" Margin="0,20,0.4,0">
+                    <TextBlock FontSize="15" Foreground="#FF629FCF" FontFamily="Segoe UI Light" Width="142" Margin="0,0,0,-0.2"><Run Text="Mot de passe"/><Run Foreground="#FFFF1818" Text="*"/><Run Text=" "/><Run Text=":"/></TextBlock>
+                    <PasswordBox x:Name ="txtMdp" Width="90" RenderTransformOrigin="0.332,1.58" Margin="0,0,0,27.8"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="35" Margin="0,0,0.4,0">
+                    <Button x:Name="btnValider" Width="73" Content="Valider" Click="btnValider_Click" Height="26" VerticalAlignment="Bottom" 
+                            Foreground="White" Background="#FF1A69A0" BorderBrush="#FF1A69A0"
+                            Margin="100,0,0,0.2" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

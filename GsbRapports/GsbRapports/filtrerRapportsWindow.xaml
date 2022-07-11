@@ -1,0 +1,64 @@
+﻿<Window x:Class="GsbRapports.filtrerRapportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GsbRapports"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="filtrerRapportsWindow" Height="450" Width="800" Background="#FFF0F0F0">
+    <Grid>
+        <Line Margin="249,-27,522.6,263"
+     X1="10" Y1="300"
+     X2="10" Y2="50"
+     Stroke="#FF1A69A0"
+     StrokeThickness="0.5"/>
+        <TextBlock FontWeight="Bold" Margin="276,38,326.6,361" Foreground="#FF6EA7CE" ><Run Text="Selectionner entre deux date"/><Run Text=" :"/></TextBlock>
+        <StackPanel Orientation="Horizontal" Margin="276,59,30.6,319">
+
+            <TextBlock Width="76" FontWeight="Bold" Margin="0,0,0,0.6"><Run Text="Date "/><Run Text="d"/><Run Text="é"/><Run Text="but"/><Run Text=" :"/></TextBlock>
+            <DatePicker x:Name="dateDebut"  Margin="0,0,0,-0.2" BorderBrush="{x:Null}"/>
+            <TextBlock Width="60" FontWeight="Bold" Margin="50,0,0,-1.6"><Run Text="Dat"/><Run Text="e fin :"/></TextBlock>
+            <DatePicker x:Name="dateFin"  Margin="0,0,0,-0.2" BorderBrush="{x:Null}"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="16,59,536.6,331">
+            <TextBlock Text="Visiteurs" Width="97" FontWeight="Bold"/>
+            <ComboBox x:Name="cmbVisiteur" Margin="50,0,0,-0.4" Width="83" 
+                      Height="22" VerticalAlignment="Top" 
+                      SelectionChanged="cmbVisiteur_SelectionChanged_1"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="16,101,536.6,277">
+            <TextBlock Text="Médecin " Width="70" FontWeight="Bold" Margin="0,0,0,-0.4"/>
+            <TextBox x:Name="txtMedecin" Margin="10,0,0,0" Width="47" KeyUp="txtQuantite_KeyUp"  VerticalAlignment="Top" Height="22"/>
+            <ComboBox x:Name="cmbMedecin" Margin="20,0,0,-0.4" Width="83" VerticalAlignment="Top" SelectionChanged="cmbMedecin_SelectionChanged"/>
+        </StackPanel>
+        <TextBlock  FontFamily="Source Sans Pro Semibold" Margin="628,0,-0.4,380"><Run Foreground="#FF1A69A0" FontSize="32" Text="FILTRER"/></TextBlock>
+        <DataGrid x:Name="dtg" AutoGenerateColumns="False" Margin="10,202,9.6,50"  AlternatingRowBackground = "LightBlue" Padding="0" Background="White">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" 
+                    Binding="{Binding idRapport}" Foreground="BLACK"/>
+                <DataGridTextColumn Header="Date"  Width="70"  
+                    Binding="{Binding date}" Foreground="BLACK"/>
+                <DataGridTextColumn Header="Visiteur"  Width="120"  
+                    Binding="{Binding concatVisiteur}" Foreground="BLACK"/>
+                <DataGridTextColumn Header="Medecin"  Width="120"  
+                    Binding="{Binding concatMedecin}" Foreground="BLACK"/>
+                <DataGridTextColumn Header="Motif"  Width="200"  
+                    Binding="{Binding motif}" Foreground="BLACK"/>
+                <DataGridTextColumn Header="Bilan"  Width="205" 
+                    Binding="{Binding bilan}" Foreground="BLACK"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Margin="737,56,3.6,319">
+            <Button x:Name="btnValider" Content="OK" Width="28" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                    Height="21" Click="btnValider_Click_1" FontWeight="Bold" Margin="0,0,0,9" />
+
+        </Grid>
+        <Grid Margin="693,375,9.6,2">
+            <Button x:Name="btnSeria" Content="Serializer" Width="80" HorizontalAlignment="Right" VerticalAlignment="Center" Height="28" FontWeight="Bold" Click="btnSeria_Click" />
+        </Grid>
+
+
+    </Grid>
+</Window>

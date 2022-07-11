@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ArrayOfRapport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Rapport>
+    <idRapport>0</idRapport>
+    <motif>recommandation de confrère</motif>
+    <bilan>Pas en confiance</bilan>
+    <date>2021-09-14T00:00:00</date>
+    <idMedecin>0</idMedecin>
+    <nomVisiteur>Frémont</nomVisiteur>
+    <prenomVisiteur>Fernande</prenomVisiteur>
+    <nomMedecin>ABEILLE</nomMedecin>
+    <prenomMedecin>Marie</prenomMedecin>
+  </Rapport>
+  <Rapport>
+    <idRapport>0</idRapport>
+    <motif>tututu</motif>
+    <bilan>il a des rougueur</bilan>
+    <date>2444-04-12T00:00:00</date>
+    <idMedecin>0</idMedecin>
+    <nomVisiteur>Andre</nomVisiteur>
+    <prenomVisiteur>David</prenomVisiteur>
+    <nomMedecin>ABEILLE</nomMedecin>
+    <prenomMedecin>Marie</prenomMedecin>
+  </Rapport>
+</ArrayOfRapport>
